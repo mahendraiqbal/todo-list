@@ -125,19 +125,19 @@ function Activity() {
                     <div className="todo-title">
                         <div className="icon-back">
                             <a href="/">
-                                <button>{'<'}</button>
+                                <button data-cy="todo-back-button">{'<'}</button>
                             </a>
                         </div>
                         <form onSubmit={submitEdit}>
                             <div className="icon-edit-h">
-                                <input id="TitleDetail" defaultValue={oneActivity.title} className="editTitle" onChange={handleEdit} name="titleEdit" />
+                                <input data-cy="todo-title" id="TitleDetail" defaultValue={oneActivity.title} className="editTitle" onChange={handleEdit} name="titleEdit" />
                                 <button type="submit" onClick={submitEdit}>
-                                    <img src={Edit} alt="edit" />
+                                    <img src={Edit} alt="edit" data-cy="todo-title-edit-button" />
                                 </button>
                             </div>
                         </form>
                         <div className="d-flex">
-                            <div className="dropdown">
+                            <div className="dropdown" data-cy="todo-sort-button">
                                 <div>
                                     <button id="ButtonSort" className="btn-sort">
                                         <div className="icon-sort"></div>
@@ -145,26 +145,27 @@ function Activity() {
                                 </div>
                             </div>
                             <form onSubmit={handleSubmit}>
-                                <Button variant="primary" onClick={initModal}>
+                                <Button variant="primary" onClick={initModal} data-cy="todo-add-button">
                                     + Tambah
                                 </Button>
                                 <Modal show={isShow}>
-                                    <Modal.Header closeButton onClick={closeModal}>
-                                        <Modal.Title>Tambah List Item</Modal.Title>
+                                    <Modal.Header closeButton onClick={closeModal} data-cy="modal-add-close-button">
+                                        <Modal.Title data-cy="modal-add-title">Tambah List Item</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
                                         <div className="modal-body">
                                             <div>
-                                                <label>NAMA LIST ITEM</label>
+                                                <label data-cy="modal-add-name-title">NAMA LIST ITEM</label>
                                                 <input
                                                     placeholder="Tambahkan Nama Activity"
                                                     className="form-control"
                                                     name="title"
                                                     onChange={handleChange}
+                                                    data-cy="modal-add-name-input"
                                                 />
                                             </div>
-                                            <label>Priority</label>
-                                            <select name="priority" id="priority" onChange={handleChange}>
+                                            <label data-cy="modal-add-priority-title">Priority</label>
+                                            <select name="priority" id="priority" onChange={handleChange} data-cy="modal-add-priority-item">
                                                 <option value="very-high">Very High</option>
                                                 <option value="high">High</option>
                                                 <option value="medium">Medium</option>

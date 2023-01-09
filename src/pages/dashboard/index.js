@@ -48,7 +48,7 @@ function Dashboard() {
             <div className="container">
                 <div className="todo-header">
                     <h1 className="activity-title">Activity</h1>
-                    <button className="addActivity" onClick={handleSubmit}>+ Tambah</button>
+                    <button className="addActivity" onClick={handleSubmit} data-cy="activity-add-button">+ Tambah</button>
                 </div>
                 <div className="detail-content">
                     {activity.length === 0 ? (

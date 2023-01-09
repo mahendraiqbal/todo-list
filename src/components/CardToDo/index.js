@@ -103,15 +103,15 @@ export default function CardToDo({ activity_group_id, id, is_active, priority, t
     return (
         <>
             <ToastContainer />
-            <div className='content-item'>
+            <div className='content-item' data-cy="todo-item">
                 <div className='d-flex align-items-center form-check'>
                     <div>
-                        <input type="checkbox" className='form-check-input' />
+                        <input type="checkbox" className='form-check-input' data-cy="todo-item-checkbox" />
                     </div>
-                    <span>{title}</span>
+                    <span data-cy="todo-item-title">{title}</span>
                     <form onSubmit={handleSubmit}>
                         <Button onClick={initModal} className="icon-edit">
-                            <img src={Edit} alt="edit" className='icon-edit-p' />
+                            <img src={Edit} alt="edit" className='icon-edit-p' data-cy="todo-item-edit-button" />
                         </Button>
                         <Modal show={isShow}>
                             <Modal.Header closeButton onClick={closeModal}>
@@ -140,14 +140,14 @@ export default function CardToDo({ activity_group_id, id, is_active, priority, t
                                 </div>
                             </Modal.Body>
                             <Modal.Footer>
-                                <Button variant="dark" type="submit" onClick={handleSubmit}>
+                                <Button variant="dark" type="submit" onClick={handleSubmit} data-cy="modal-add-save-button">
                                     Simpan
                                 </Button>
                             </Modal.Footer>
                         </Modal>
                     </form>
                 </div>
-                <img src={Delete} alt="delete" onClick={deleteHandler} className="delete-icon" />
+                <img src={Delete} alt="delete" onClick={deleteHandler} className="delete-icon" data-cy="todo-item-delete-button" />
             </div>
         </>
     )

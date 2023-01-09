@@ -44,7 +44,7 @@ export default function Card({ id, title, date }) {
   return (
     <div className='col-3'>
       <ToastContainer />
-      <div className='activity-card'>
+      <div className='activity-card' data-cy="activity-item">
         <Link style={{ textDecoration: 'none' }}
           to={`/detail/${id}`}
         >
@@ -53,8 +53,8 @@ export default function Card({ id, title, date }) {
           </div>
         </Link>
         <div className='card-footer'>
-          <span className='activity-time-date'>{formatedDate}</span>
-          <img src={Delete} alt="delete" onClick={deleteHandler} />
+          <span className='activity-time-date' data-cy="activity-item-date">{formatedDate}</span>
+          <img src={Delete} alt="delete" onClick={deleteHandler} data-cy="activity-item-delete-button" />
         </div>
       </div>
     </div>

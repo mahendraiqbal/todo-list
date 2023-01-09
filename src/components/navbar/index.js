@@ -5,7 +5,7 @@ function Navbar() {
     return (
         <>
             <div className="topnav">
-                <p className='brand'>TO DO LIST APP</p>
+                <p className='brand' data-cy="header-background">TO DO LIST APP</p>
             </div>
         </>
     )

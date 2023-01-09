@@ -1,0 +1,33 @@
+.activity-card {
+  height: 234px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 22px 27px;
+  margin-bottom: 26px;
+  position: relative;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 15%);
+}
+
+.activity-card .activity-body {
+  cursor: pointer;
+  height: 158px;
+}
+
+.activity-card .card-footer {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  border: 0;
+  width: calc(100% - 54px);
+  padding: 0;
+}
+
+.title-data {
+  text-decoration: none;
+  color: #000;
+  font-family: "Poppins";
+  font-weight: 800;
+}

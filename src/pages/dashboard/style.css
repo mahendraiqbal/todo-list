@@ -1,0 +1,35 @@
+.container {
+  max-width: 1000px;
+  width: 100%;
+  padding-right: 0.75rem;
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: 0.75rem;
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 43px 0 55px;
+}
+
+.addActivity {
+  background: #16abf8;
+  color: #fff;
+  width: 170px;
+  height: 54px;
+  border-radius: 45px;
+  border: 0;
+  padding: 13.5px 29px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.activity-title {
+  font-size: 36px;
+  font-weight: 700;
+}

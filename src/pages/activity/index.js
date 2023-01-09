@@ -49,6 +49,7 @@ function Activity() {
             fetchData();
             setIsNotGet(false);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activity, isNotGet]);
 
     const fetchOneData = () => {
@@ -67,6 +68,7 @@ function Activity() {
             fetchOneData();
             setIsNotGet(false);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [oneActivity, isNotGet]);
 
     const handleChange = (e) => {

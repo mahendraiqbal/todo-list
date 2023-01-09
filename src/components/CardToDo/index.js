@@ -36,6 +36,7 @@ export default function CardToDo({ activity_group_id, id, is_active, priority, t
             fetchData();
             setIsNotGet(false);
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [activity, isNotGet]);
 
     const initModal = () => {
